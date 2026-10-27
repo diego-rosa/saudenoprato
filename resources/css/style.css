@@ -1,0 +1,214 @@
+/*************************************/
+/***** CONFIGURAÇÕES BÁSICAS *********/
+/*************************************/
+
+/* Zerar os espaçamentos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*************************************/
+/************ HERO HEADER ************/
+/*************************************/
+
+header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .5)),
+        url(img/img-hero-header.jpg);
+
+    height: 100vh;/*tamanho total do viewport*/
+    background-size:cover;
+    background-position: center;;
+}
+
+header>div.slogan>h1 {/*Seleciona o elemento H1 que é filho do elemento div com a classe "slogan" e essa div é filha do elemento header*/
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight:300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-size: 180%;
+}
+
+.btn:link, 
+.btn:visited{
+    border: 1px solid #E67E22;
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 200px;
+    transition: .2s;
+}
+
+.btn-full {
+    background-color: #E67E22;
+    margin-right: 20px;
+}
+
+.btn:hover,
+.btn:active {
+    border-color: #cf6d17;
+    background-color: #cf6d17;
+}
+
+.slogan {
+    margin-top: 150px;
+    margin-left: 10%;
+}
+
+/*************************************/
+/*********** MENU NAVEGAÇÃO **********/
+/*************************************/
+.logo {
+    height: 100px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav>ul{
+    list-style-type: none;
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.main-nav>ul>li>a:link,
+.main-nav>ul>li>a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s;
+    padding-bottom: 6px;
+    
+}
+
+.main-nav>ul>li>a:hover,
+.main-nav>ul>li>a:active {
+    border-bottom: 2px solid #E67E22 ;
+}
+
+/*************************************/
+/*********** INFORMAÇÕES *************/
+/*************************************/
+section{
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 180%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+/*seleciona o elemento H2 e cria um pseudo elemento ANTES do H2*/
+/*h2::before {*/
+    /*content: "\002638 ";*/
+
+/*seleciona o elemento H2 e cria um pseudo elemento DEPOIS do H2*/
+h2::after {
+    content: " ";
+    height: 2px;
+    width: 100px;
+    background-color: #E67E22;
+    display: block;
+    margin: 30PX auto;
+}
+
+.top>p {
+    width: 70%;
+    margin: 0 auto;
+    line-height: 145%;
+}
+
+.info{
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*Seleciona os elementos DIV que são filhos de um elemento DIV com a classe INFO*/
+div.info>div {
+    flex-basis: 250px;
+    flex-grow: 1;
+    padding: 1%;
+}
+
+.info ion-icon {
+    font-size: 350%;
+    color: #E67E22;
+}
+
+.info h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.info p {
+    text-align: justify;
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*************************************/
+/************* GALERIA ***************/
+/*************************************/
+
+.sec-galery ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.sec-galery>ul>li {
+    flex-basis: 250px;
+    flex-grow: 1;
+    /*Esconde as partes das imagens que transbordam/violam/ ultrapassam os limetes do container*/
+    overflow: hidden;
+    background-color: #000;
+}
+
+.sec-galery>ul>li img {
+    width: 100%;
+    transform: scale(1.05);
+    transition: 1s;
+    opacity: .8;
+}
+
+.sec-galery>ul>li img:hover,
+.sec-galery>ul>li img:active{
+    transform: scale(1.15);
+    opacity: 1;
+    /*filter: blur(2px)*/
+    /*filter: brightness(120%);*/
+    /*filter: contrast(120%) saturate(150%);*/
+    /*filter: grayscale(70%);*/
+    /*filter: sepia(100%);*/
+    /*filter: drop-shadow(8px 8px 1px grey);*/
+}
+    
+
+
+
+
