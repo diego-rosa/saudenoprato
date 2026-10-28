@@ -18,29 +18,28 @@ html{
 }
 
 /*************************************/
-/************ HERO HEADER ************/
+/*********** HERO HEADER *************/
 /*************************************/
-
-header {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, .5)),
+header{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, .7)),
         url(img/img-hero-header.jpg);
-
-    height: 100vh;/*tamanho total do viewport*/
-    background-size:cover;
-    background-position: center;;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
-
-header>div.slogan>h1 {/*Seleciona o elemento H1 que é filho do elemento div com a classe "slogan" e essa div é filha do elemento header*/
-    color: #FFFFFF;
+/* Seleciona o elemento h1 que é filho do elemento div com 
+a classe "slogan" e essa div é filha do elemento header */
+header>div.slogan>h1{
+    color: #FFF;
     text-transform: uppercase;
-    font-weight:300;
+    font-weight: 300;
     letter-spacing: 1px;
     word-spacing: 4px;
     font-size: 180%;
 }
 
-.btn:link, 
+.btn:link,
 .btn:visited{
     border: 1px solid #E67E22;
     display: inline-block;
@@ -51,32 +50,33 @@ header>div.slogan>h1 {/*Seleciona o elemento H1 que é filho do elemento div com
     transition: .2s;
 }
 
-.btn-full {
+.btn-full{
     background-color: #E67E22;
     margin-right: 20px;
 }
 
 .btn:hover,
-.btn:active {
-    border-color: #cf6d17;
-    background-color: #cf6d17;
+.btn:active{
+    border-color: #CF6D17;
+    background-color: #CF6D17;
 }
 
-.slogan {
+.slogan{
     margin-top: 150px;
     margin-left: 10%;
 }
 
 /*************************************/
-/*********** MENU NAVEGAÇÃO **********/
+/********** MENU NAVEGAÇÃO ***********/
 /*************************************/
-.logo {
+.logo{
     height: 100px;
 }
 
-.main-nav {
+.main-nav{
     display: flex;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .main-nav>ul{
@@ -85,33 +85,31 @@ header>div.slogan>h1 {/*Seleciona o elemento H1 que é filho do elemento div com
     width: 600px;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .main-nav>ul>li>a:link,
-.main-nav>ul>li>a:visited {
-    color: #FFFFFF;
+.main-nav>ul>li>a:visited{
+    color: #FFF;
     text-decoration: none;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     transition: border-bottom .2s;
     padding-bottom: 6px;
-    
 }
 
 .main-nav>ul>li>a:hover,
-.main-nav>ul>li>a:active {
-    border-bottom: 2px solid #E67E22 ;
+.main-nav>ul>li>a:active{
+    border-bottom: 2px solid #E67E22;
 }
 
 /*************************************/
-/*********** INFORMAÇÕES *************/
+/*********** INFORMAÇÕES ************/
 /*************************************/
 section{
     padding: 80px 0;
 }
-
-h2 {
+ 
+h2{
     font-size: 180%;
     text-transform: uppercase;
     font-weight: 300;
@@ -120,21 +118,21 @@ h2 {
     word-spacing: 2px;
 }
 
-/*seleciona o elemento H2 e cria um pseudo elemento ANTES do H2*/
-/*h2::before {*/
-    /*content: "\002638 ";*/
+/* Seleciona o elemento H2 e cria um pseudo elemento ANTES do H2 */
+/* h2::before{ */
 
-/*seleciona o elemento H2 e cria um pseudo elemento DEPOIS do H2*/
-h2::after {
+/* Seleciona o elemento H2 e cria um pseudo elemento DEPOIS do H2 */
+h2::after{
+    /* content: "\002638"; */
     content: " ";
     height: 2px;
     width: 100px;
     background-color: #E67E22;
     display: block;
-    margin: 30PX auto;
+    margin: 30px auto;
 }
 
-.top>p {
+.top>p{
     width: 70%;
     margin: 0 auto;
     line-height: 145%;
@@ -146,50 +144,51 @@ h2::after {
     flex-wrap: wrap;
     justify-content: center;
 }
-/*Seleciona os elementos DIV que são filhos de um elemento DIV com a classe INFO*/
-div.info>div {
+/* Seleciona os elementos DIV que são filhos de um elemento 
+DIV com a classe INFO */
+div.info>div{
     flex-basis: 250px;
     flex-grow: 1;
     padding: 1%;
 }
 
-.info ion-icon {
+.info ion-icon{
     font-size: 350%;
     color: #E67E22;
 }
 
-.info h3 {
+.info h3{
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 15px;
 }
 
-.info p {
+.info p{
     text-align: justify;
     font-size: 90%;
     line-height: 145%;
 }
 
 /*************************************/
-/************* GALERIA ***************/
+/************** GALERIA **************/
 /*************************************/
-
-.sec-galery ul {
+.sec-galery ul{
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
     gap: 5px;
 }
 
-.sec-galery>ul>li {
-    flex-basis: 250px;
+.sec-galery>ul>li{
+    flex-basis: 380px;
     flex-grow: 1;
-    /*Esconde as partes das imagens que transbordam/violam/ ultrapassam os limetes do container*/
+    /* Esconde as partes das imagens que transbordam/violam/
+    ultrapassam os limites do container */
     overflow: hidden;
     background-color: #000;
 }
 
-.sec-galery>ul>li img {
+.sec-galery>ul>li img{
     width: 100%;
     transform: scale(1.05);
     transition: 1s;
@@ -200,15 +199,37 @@ div.info>div {
 .sec-galery>ul>li img:active{
     transform: scale(1.15);
     opacity: 1;
-    /*filter: blur(2px)*/
-    /*filter: brightness(120%);*/
-    /*filter: contrast(120%) saturate(150%);*/
-    /*filter: grayscale(70%);*/
-    /*filter: sepia(100%);*/
-    /*filter: drop-shadow(8px 8px 1px grey);*/
+    /* filter: blur(2px); */
+    /* filter: brightness(120%); */
+    /* filter: contrast(120%) saturate(150%); */
+    /* filter: grayscale(70%); */
+    /* filter: sepia(100%); */
+    /* filter: drop-shadow(8px 8px 7px gray); */
 }
-    
 
+/*************************************/
+/************** GALERIA 2 ************/
+/*************************************/
+.sec-galery-2>figure{
+    width: 70%;
+    height: 450px;
+    margin: 0 auto;
+    /*background-color: #555;*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
+.sec-galery-2>figure>img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #E67E22;
+    border-radius: 10px;
+    transition: width ease-in-out .5s;
+}
 
+.sec-galery-2>figure>img:hover {
+    width: 55%;
+}
 
